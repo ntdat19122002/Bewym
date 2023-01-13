@@ -6,7 +6,7 @@ export default function Layout({ title, children }) {
     return (
         <>
             <Head>
-                <title>{title ? title + ' - Amazona' : 'Amazona'}</title>
+                <title>{title ? title + ' - Bewym' : 'Bewym'}</title>
                 <meta name="description" content="Bewym" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png"/>
                 <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png"/>

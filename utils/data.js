@@ -1,5 +1,5 @@
 const data = {
-    products: [
+    users: [
       {
         name: 'Nguyễn Thành Đạt',
         type: 'admin',

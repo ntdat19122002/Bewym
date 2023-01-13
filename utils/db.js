@@ -15,7 +15,7 @@ async function connect() {
     }
     await mongoose.disconnect();
   }
-  const db = await mongoose.connect('mongodb+srv://ntdat:ntdat6936@cluster0.zdyeuxf.mongodb.net/?retryWrites=true&w=majority');
+  const db = await mongoose.connect(process.env.MONGODB_URI);
   console.log('new connection');
   connection.isConnected = db.connections[0].readyState;
 }

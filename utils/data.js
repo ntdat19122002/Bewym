@@ -2,6 +2,8 @@ const data = {
     users: [
       {
         name: 'Nguyễn Thành Đạt',
+        username:'ntdat',
+        password:'123456',
         type: 'admin',
         gender: 'male',
         image: '/user/ntdat.jpg',
@@ -9,6 +11,8 @@ const data = {
       },
       {
         name: 'Lê Phương Nhi',
+        username:'lpnhi',
+        password:'123456',
         type: 'admin',
         gender: 'female',
         image: '/user/lpnhi.jpg',
@@ -16,6 +20,8 @@ const data = {
       },
       {
         name: 'Nguyễn Di Đan',
+        username:'nddan',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/nddan.jpg',
@@ -23,13 +29,17 @@ const data = {
       },
       {
         name: 'Tô Thị Hậu Phương',
+        username:'tthphuong',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/tthphuong.jpg',
         description: 'A popular shirt',
       },
       {
-        name: 'Bảo Khanh',
+        name: 'Nông Bảo Khanh',
+        username:'nbkhanh',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/nbkhanh.jpg',
@@ -37,6 +47,8 @@ const data = {
       },
       {
         name: 'Phạm Xuân Lâm',
+        username:'pxlam',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/pxlam.jpg',
@@ -44,6 +56,8 @@ const data = {
       },
       {
         name: 'Lê Trung',
+        username:'ltrung',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/ltrung.jpg',
@@ -51,6 +65,8 @@ const data = {
       },
       {
         name: 'Lê Thị Linh',
+        username:'ltlinh',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/ltlinh.jpg',
@@ -58,6 +74,8 @@ const data = {
       },
       {
         name: 'Lương Ngọc Đức',
+        username:'lnduc',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/lnduc.jpg',
@@ -65,6 +83,8 @@ const data = {
       },
       {
         name: 'Nguyễn Trần Nhật Anh',
+        username:'ntnanh',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/ntnanh.jpg',
@@ -72,6 +92,8 @@ const data = {
       },
       {
         name: 'Nguyễn Trang',
+        username:'ntrang',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/ntrang.jpg',
@@ -79,6 +101,8 @@ const data = {
       },
       {
         name: 'Vũ Hưng',
+        username:'vhung',
+        password:'123456',
         type: 'admin',
         gender: 'girl',
         image: '/user/vhung.jpg',

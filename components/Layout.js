@@ -1,19 +1,23 @@
+import { useSession } from 'next-auth/react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
 
 export default function Layout({ title, children }) {
+    const { status, data: session } = useSession();
     return (
         <>
             <Head>
                 <title>{title ? title + ' - Bewym' : 'Bewym'}</title>
                 <meta name="description" content="Bewym" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png"/>
-                <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png"/>
-                <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png"/>
-                <link rel="manifest" href="/icon/site.webmanifest"/>
+                <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png" />
+                <link rel="manifest" href="/icon/site.webmanifest" />
             </Head>
-
+            <ToastContainer position="bottom-center" limit={1} />
             <div className="flex min-h-screen flex-col justify-between ">
                 <header>
                     <nav className="flex h-12 items-center px-4 justify-between shadow-md">
@@ -25,7 +29,15 @@ export default function Layout({ title, children }) {
                                 Cart
                             </Link>
                             <Link href="/login" className="p-2">
-                                Login
+                                {status === 'loading' ? (
+                                    'Loading'
+                                ) : session?.user ? (
+                                    session.user.name
+                                ) : (
+                                    <Link href="/login">
+                                        <a className="p-2">Login</a>
+                                    </Link>
+                                )}
                             </Link>
                         </div>
                     </nav>

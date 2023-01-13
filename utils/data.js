@@ -1,9 +1,11 @@
+import bcrypt from 'bcryptjs'
+
 const data = {
     users: [
       {
         name: 'Nguyễn Thành Đạt',
         username:'ntdat',
-        password:'123456',
+        password: bcrypt.hashSync('123456'),
         type: 'admin',
         gender: 'male',
         image: '/user/ntdat.jpg',

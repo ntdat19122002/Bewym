@@ -25,8 +25,8 @@ export default function Layout({ title, children }) {
                             BEWYM
                         </Link>
                         <div>
-                            <Link href="/cart" className="p-2">
-                                Cart
+                            <Link href="/user" className="p-2">
+                                Users
                             </Link>
                             <Link href="/login" className="p-2">
                                 {status === 'loading' ? (

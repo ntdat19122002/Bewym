@@ -13,8 +13,8 @@ const data = {
       },
       {
         name: 'Lê Phương Nhi',
-        username:bcrypt.hashSync('123456'),
-        password:'123456',
+        username:'lpnhi',
+        password:bcrypt.hashSync('123456'),
         type: 'admin',
         gender: 'female',
         image: '/user/lpnhi.jpg',

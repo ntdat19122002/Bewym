@@ -1,0 +1,90 @@
+const data = {
+    products: [
+      {
+        name: 'Nguyễn Thành Đạt',
+        type: 'admin',
+        gender: 'male',
+        image: '/user/ntdat.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Lê Phương Nhi',
+        type: 'admin',
+        gender: 'female',
+        image: '/user/lpnhi.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Nguyễn Di Đan',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/nddan.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Tô Thị Hậu Phương',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/tthphuong.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Bảo Khanh',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/nbkhanh.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Phạm Xuân Lâm',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/pxlam.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Lê Trung',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/ltrung.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Lê Thị Linh',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/ltlinh.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Lương Ngọc Đức',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/lnduc.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Nguyễn Trần Nhật Anh',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/ntnanh.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Nguyễn Trang',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/ntrang.jpg',
+        description: 'A popular shirt',
+      },
+      {
+        name: 'Vũ Hưng',
+        type: 'admin',
+        gender: 'girl',
+        image: '/user/vhung.jpg',
+        description: 'A popular shirt',
+      },
+    ],
+  };
+  
+  export default data;

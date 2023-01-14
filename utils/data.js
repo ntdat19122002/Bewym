@@ -57,12 +57,12 @@ const data = {
         description: 'A popular shirt',
       },
       {
-        name: 'Lê Trung',
-        username:'ltrung',
+        name: 'Lê Đức Trung',
+        username:'ldtrung',
         password:bcrypt.hashSync('123456'),
         type: 'admin',
         gender: 'girl',
-        image: '/user/ltrung.jpg',
+        image: '/user/ldtrung.jpg',
         description: 'A popular shirt',
       },
       {

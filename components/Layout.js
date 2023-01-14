@@ -7,11 +7,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
 import DropdownLink from './DropdownLink';
+import { useRouter } from 'next/router';
 
 export default function Layout({ title, children }) {
+    const router = useRouter()
     const logoutClickHandler = () => {
-        Cookies.remove('cart');
-        sessionStorage.clear(); 
+        // Cookies.remove('cart');
+        sessionStorage.clear();      
         signOut({ callbackUrl: '/login' });
       };
     const { status, data: session } = useSession();
@@ -33,6 +35,8 @@ export default function Layout({ title, children }) {
                             BEWYM
                         </Link>
                         <div>
+                            <Link href="/question" className="p-2">
+                            </Link>
                             <Link href="/user" className="p-2">
                                 Users
                             </Link>

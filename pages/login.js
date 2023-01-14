@@ -14,7 +14,7 @@ export default function LoginScreen() {
 
     useEffect(() => {
         if (session?.user) {
-            router.push(redirect || '/report');
+            router.push(redirect || '/');
         }
     }, [router, session, redirect]);
 

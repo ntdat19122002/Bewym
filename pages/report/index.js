@@ -9,6 +9,7 @@ export default function Report() {
 
     const router = useRouter();
     const { redirect } = router.query;
+    const user = session.user.name
 
     useEffect(() => {
         if (session?.user) {
@@ -30,6 +31,7 @@ export default function Report() {
 
     const handleSubmit = async(event) => {
         await axios.post('/api/report/submit', {
+            user,
           todayJobMessage,
           tommorrowJobMessage
         });

@@ -6,7 +6,7 @@ async function handler(req, res) {
   if (req.method !== 'POST') {
     return;
   }
-  const { todayJobMessage, tommorrowJobMessage } = req.body;
+  const { user,todayJobMessage, tommorrowJobMessage } = req.body;
   if (
     !todayJobMessage || !tommorrowJobMessage
   ) {
@@ -19,7 +19,7 @@ async function handler(req, res) {
   await db.connect();
 
   const newReport = new Report({
-    todayJobMessage,tommorrowJobMessage
+    user,todayJobMessage,tommorrowJobMessage
   });
 
   const report = await newReport.save();
@@ -27,6 +27,7 @@ async function handler(req, res) {
   res.status(201).send({
     message: 'Created user!',
     _id: report._id,
+    user: report.user,
     todayJobMessage: report.todayJobMessage,
     tommorrowJobMessage: report.tommorrowJobMessage,
   });

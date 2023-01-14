@@ -6,9 +6,9 @@ async function handler(req, res) {
   if (req.method !== 'POST') {
     return;
   }
-  const { question } = req.body;
+  const { user,question } = req.body;
   if (
-    !question
+    !question || !user
   ) {
     res.status(422).json({
       message: 'Validation error',
@@ -19,6 +19,7 @@ async function handler(req, res) {
   await db.connect();
 
   const newQuestion = new Question({
+    user,
     question
   });
 
@@ -27,7 +28,9 @@ async function handler(req, res) {
   res.status(201).send({
     message: 'Created user!',
     _id: question_model._id,
+    user: question_model.user,
     question: question_model.question,
+    
   });
 }
 

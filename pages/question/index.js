@@ -9,6 +9,7 @@ export default function Question() {
 
     const router = useRouter();
     const { redirect } = router.query;
+    const user = session.user.name
 
     useEffect(() => {
         if (session?.user) {
@@ -25,7 +26,8 @@ export default function Question() {
 
     const handleSubmit = async(event) => {
         await axios.post('/api/question/submit', {
-          question,
+          user,
+          question
         });
         setQuestion('')
     };

@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
 import DropdownLink from './DropdownLink';
 import { useRouter } from 'next/router';
+import 'tw-elements';
 
 export default function Layout({ title, children }) {
     const router = useRouter()

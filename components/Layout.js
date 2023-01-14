@@ -8,12 +8,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
 import DropdownLink from './DropdownLink';
 import { useRouter } from 'next/router';
-import 'tw-elements';
 
 export default function Layout({ title, children }) {
     const router = useRouter()
     const logoutClickHandler = () => {
-        // Cookies.remove('cart');
         sessionStorage.clear();      
         signOut({ callbackUrl: '/login' });
       };
@@ -37,9 +35,10 @@ export default function Layout({ title, children }) {
                         </Link>
                         <div>
                             <Link href="/question" className="p-2">
+                            { session?.user ? <span>Question</span> : <span></span>}
                             </Link>
-                            <Link href="/user" className="p-2">
-                                Users
+                            <Link href="/report" className="p-2">
+                            { session?.user ? <span>Report</span> : <span></span>}
                             </Link>
                             <Link href="/login" className="p-2">
                                 {status === 'loading' ? (

@@ -4,7 +4,7 @@ import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import axios from 'axios'
 
-export default function report() {
+export default function Report() {
     const { data: session } = useSession();
 
     const router = useRouter();
@@ -33,6 +33,8 @@ export default function report() {
           todayJobMessage,
           tommorrowJobMessage
         });
+        setTodayJobMessage('')
+        setTommorrowJobMessage('')
     };
     return (
         <form
@@ -41,14 +43,14 @@ export default function report() {
         >
             <h1 className="mb-4 text-xl">Report</h1>
             <div className="mb-4">
-                <label htmlFor="today_job">What we have done today</label>
+                <label htmlFor="today_job">What we have done today?</label>
                 <textarea id="today_job" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                           placeholder="Write your thoughts here..." value={todayJobMessage} onChange={handleMessageTodayChange}>
 
                 </textarea>
             </div>
             <div className="mb-4">
-                <label htmlFor="tommorrow_job">What do you plan to do tommorrow</label>
+                <label htmlFor="tommorrow_job">What do you plan to do tommorrow?</label>
                 <textarea id="tommorrow_job" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                           placeholder="Write your thoughts here..." value={tommorrowJobMessage} onChange={handleMessageTommorrowChange}>
 

@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const reportSchema = new mongoose.Schema(
   {
-    user: { type: String, required: true },
+    user: { type: String},
     todayJobMessage: { type: String, required: true },
     tommorrowJobMessage: { type: String, required: true },
   },
